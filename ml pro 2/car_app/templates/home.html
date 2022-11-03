@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <title> App By Samarth </title>
+    <style>
+       *{font-size:30px;}
+       body{
+           background-image:url({{url_for('static', filename='bulitin/car1.jpg')}});
+           background-size:cover;
+           color:red;
+         }
+         h1{
+           background-color:navy;
+           color:red;
+            }
+         .btn{border-radius:30px;
+          color:red;
+          background-color:navy;}
+        
+           
+       
+    </style>
+    
+  </head>
+   
+  <body >
+       
+       <center>
+        <h1> Car price Predictor </h1>
+        
+               
+         <form method="POST">
+         
+             
+          <input type="number" name="k" placeholder="Total Kilometers driven" min="1" max="806599" step="any" required />
+             <br/><br/>
+          <input type="number" name="y" placeholder="Purchasing Year of Car"  min="1992" max="2020" step="any"  required />
+             <br/><br/>
+          Select Car Brand <select name="n">
+             <br/><br/>
+                      <option value="1">Maruti</option>
+                      <option value="2">Hyundai</option>
+                      <option value="3">Datsun</option>
+                      <option value="4">Honda</option>
+                      <option value="5">Tata</option>
+                      <option value="6">Chevrolet</option>
+                      <option value="7">Toyota</option>
+                      <option value="8">Jaguar</option>
+                      <option value="9">Mercedes</option>
+                      <option value="10">Audi</option>
+                      <option value="11">Skoda</option>
+                      <option value="12">Jeep</option>
+                      <option value="13">BMW</option>
+                      <option value="14">Mahindra</option>
+                      <option value="15">Ford</option>
+                      <option value="16">Nissan</option>
+                      <option value="17">Renault</option>
+                      <option value="18">Fiat</option>
+                      <option value="19">Volkswagen</option>
+                      <option value="20">Volvo</option>
+                      <option value="21">Mitsubishi</option>
+                      <option value="22">Land Rover</option>
+                      <option value="23">Daewoo</option>
+                      <option value="24">MG Hector</option>
+                      <option value="25">Force</option>
+                      <option value="26">Isuzu</option>
+                      <option value="27">OpelCorsa</option>
+                      <option value="28">Ambassador</option>
+                      <option value="29">Kia</option>
+                      </select>
+                    <br/><br/>
+          
+          <input type="radio" name="t" value="1" checked=true/>Automatic
+          <input type="radio" name="t" value="2" />Manual
+             <br/><br/>
+          
+          <input type="radio" name="s" value="1" checked=true/>Dealer
+          <input type="radio" name="s" value="2" />Individual
+          <input type="radio" name="s" value="3" />TrustMarkDealer
+             <br/><br/>
+          <input type="radio" name="f" value="1" checked=true/>CNG
+          <input type="radio" name="f" value="2" />Diesel
+          <input type="radio" name="f" value="3"/>Electric
+          <input type="radio" name="f" value="4" />LPG
+          <input type="radio" name="f" value="5" />Petrol
+             <br/><br/>
+          
+          <input type="radio" name="o" value="1" checked=true/>1st owner
+          <input type="radio" name="o" value="2" />2nd owner
+          <input type="radio" name="o" value="3" />3rd owner
+          <input type="radio" name="o" value="4" />4&above owner
+          <input type="radio" name="o" value="5" />test-drive car
+             <br/><br/>
+          
+          
+          
+         
+          <input type="submit" name="action" value="Show Price" class="btn"/>
+          </form>
+         
+          <form method="POST">
+          <input type="submit" name="action" value="Logout" class="btn" style="position:absolute; top:50px; right:80px"/>
+          </form>
+        
+         {{msg}}
+      </center>
+  </body>
+  </div>
+</html>
